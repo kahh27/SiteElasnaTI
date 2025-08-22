@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yume Sushi</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .navbar{
+        display: flex;
+        flex-flow: row wrap;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        background-color:black;
+        position: fixed;
+        width: 100%;
+    }
+    .logo{
+        flex: 20%;
+        text-align: left;
+        color: rgb(188, 57, 10);
+        font-size: 24px;
+        margin-left: 10%;
+        font-family: "Macondo", cursive;
+    }
+    .menu{
+        flex: 70%;
+        text-align: right;
+        padding: 20px;
+    }
+    .menu a{
+        color: orange;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px 16px;
+    }
+    .menu a:hover{
+        color: darksalmon;
+        border-top: 4px solid darkkhaki;
+    }
+    #botao{
+        background-color: orangered;
+        padding: 10px 25px;
+        color: white;
+        border-radius: 7px;
+        margin-left: 5%;
+        margin-right:10%;
+    }
+    #botao:hover{
+        border: none;
+        background-color: white;
+        color: orangered;
+    }
+    .hamburguer{
+        display: none;
+        font-size: 32px;
+        color: orangered;
+        cursor: pointer;
+        margin-right: 10%;
+    }
+    @media (max-width: 768px){
+        .hamburguer{
+            display: block;
+        }
+        .menu{
+            display: none;
+            flex-direction: column;
+            background-color: black;
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .menu.show{
+            display: flex;
+        }
+        .menu a{
+            padding: 15px 0;
+            display: block;
+            border-top: 1px solid orangered;
+        }
+        #botao{
+           margin: 10px auto;
+           display: inline-block;
+        }
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Yume Sushi</h1>
+        </div>
+        <div class="hamburguer" id="hamburguer">&#9776;</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Cardápio</a>
+            <a href="#" id="botao">Fale Conosco</a>
+        </div>
+    </nav>
+    <head>
+        <div class="linha-cabecalho">
+            <h2>O melhor restaurante</h2>
+            <h2>Yume Sushi</h2>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa harum dignissimos beatae minima autem officia odio quibusdam. Sequi, nisi, autem est dolorem debitis consectetur sit repellendus similique commodi libero voluptatum?
+            </p>
+            <a href="" class="botao-contato">Faça seu pedido</a>
+        </div>
+        <div class="imgcabecalho">
+            <img src="imagens/sushy.webp" style="max-width: 100%;">
+        </div>
+    </head>
+    
+        <div class="info">
+            <h2>Conheça mais sobre a culinária Japonesa</h2>
+            <div class="culinaria">
+                <div class="card">
+                    <img alt="">
+                    <div class="card-text">
+                        <h3>Nigiri</h3>
+                        <p>Uma bola de arroz moldada á mão com uma fatia de peixe cru ou outro ingrediente por cima.</p>
+                    </div>
+                </div>
+
+                 <div class="card">
+                    <img alt="">
+                    <div class="card-text">
+                        <h3>Sashimi</h3>
+                        <p>Fatias finas de salmão cru.</p>
+                    </div>
+                </div>
+
+                 <div class="card">
+                    <img alt="">
+                    <div class="card-text">
+                        <h3>Temaki</h3>
+                        <p>Um cone de alga recheado com arroz, peixe e vegetais.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+        <footer>
+            <div class="footer-contente">
+                <div class="footer-section contact">
+                    <h2>Contato</h2>
+                    <p><strong>Endereço:</strong>Rua Exemplo: 123, Caxias do Sul, RS</p>
+                    <P><strong>Telefone:</strong>(54) 3222-0000</P>
+                    <p><strong>E-mail:</strong>contato@email.com</p>
+                </div>
+
+                 <div class="footer-section hours">
+                    <h2>Horário de Funcionamento</h2>
+                    <p>Segunda à sexta: 11:00 - 22:00</p>
+                    <P>Sábado: 12:00 - 23:00</P>
+                    <p>Domingo 12:00 - 21:00</p>
+                </div>
+
+                <div class="footer-section social">
+                    <h2>Siga-nos</h2>
+                    <a href=""><img src="" alt=""></a>
+                    <a href=""><img src="" alt=""></a>
+                    <a href=""><img src="" alt=""></a>
+                </div>
+
+                <div class="footer-section map">
+                    <h2>Localização</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1755893079266!6m8!1m7!1sm0hdF_f4cGPe75E-Etc1SQ!2m2!1d-29.16663303094953!2d-51.21366360599649!3f45.297436!4f0!5f0.7820865974627469" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Yume Sushi. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+</body>
+</html>
